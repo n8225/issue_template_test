@@ -1,0 +1,83 @@
+name: Add software
+description: Add new software to the list
+title: "[Add]: "
+labels: ["addition"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name of the software
+      description: Name of the software to add
+      placeholder: "Example: My awesome software"
+    validations:
+      required: true
+  - type: input
+    id: source_code_url
+    attributes:
+      label: Source code url of the software
+      description: Source code url of the software to add
+      placeholder: "Example: https://gitlab.com/awesome/software"
+    validations:
+      required: true
+  - type: input
+    id: website_url
+    attributes:
+      label: Website of the software
+      description: Website of the software to add
+      placeholder: "Example: https://my.awesome.softwar.e"
+  - type: input
+    id: demo_url
+    attributes:
+      label: Demo site for the software
+      description: Link to an interactive demo of the software (i.e. not a video demonstration). If the demo requires credentials they also should be available from this URL.
+      placeholder: "Example: https://demo.my.awesome.softwar.e"
+  - type: input
+    id: related_software_url
+    attributes:
+      label: Related clients/addons/plugins/apps/bots...
+      description: Link to a list of clients/addons/plugins/apps/bots... for the main software. If your software fits in one of those lists, please try to get it added there instead.
+      placeholder: "Example: https://my.awesome.softwar.e/clientapp"
+  - type: input
+    id: description
+    attributes:
+      label: Description of the software
+      description: A description of my awesome software, shorter than 250 characters.
+      placeholder: "Example: Short description (max 250 characters) of the software."
+    validations:
+      required: true
+  - type: input
+    id: licenses
+    attributes:
+      label: Licenses of the software
+      description: A comma seperated list of the SPDX identifiers for the software licenses.
+      placeholder: "Example: Apache-2.0, AGPL-3.0"
+    validations:
+      required: true
+  - type: input
+    id: platforms
+    attributes:
+      label: Required platforms
+      description: A comma seperated list of languages/requirements/technologies used to run or build the software.
+      placeholder: "Python, Docker"
+    validations:
+      required: true
+  - type: input
+    id: tags
+    attributes:
+      label: tags
+      description: A comma seperated list of functional categories/features/tags for the software, the software will only appear under the first category.
+      placeholder: "Example: Automation, Calendar, File syncronization"
+    validations:
+      required: true
+  - type: checkbox
+    id: depends_3rdparty
+    attributes:
+      label: depends on a non-Free third-party service
+      description: Required if the software depends on a non-Free third-party service.
+      options:
+        - label: yes
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "Thanks for submitting a software addition request."
